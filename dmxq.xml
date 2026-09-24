@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="codeberg" fetch="https://codeberg.org/" revision="refs/heads/main" />
+	<!-- Kalama -->
+    <project name="LineageOS/android_device_samsung_sm8550-common" path="device/samsung/sm8550-common" remote="private" revision="lineage-23.2" />
+    <!--project name="samsung-sm8550-cola2261/android_device_samsung_sm8550-common" path="device/samsung/sm8550-common" remote="private" revision="lineage-23.2" / -->
+    <project name="LineageOS/android_device_samsung_dm1q" path="device/samsung/dm1q" remote="private" revision="lineage-23.2" />
+    <project name="Exynoobs/android_device_samsung_b5q" path="device/samsung/b5q" remote="private" revision="lineage-23.2" />
+    <project name="Exynoobs/android_device_samsung_q5q" path="device/samsung/q5q" remote="private" revision="lineage-23.2" />
+
+    <project name="Exynoobs/proprietary_vendor_samsung_sm8550-common" path="vendor/samsung/sm8550-common" remote="private" revision="lineage-23.2" clone-depth="15" />
+    <!-- project name="samsung-sm8550-cola2261/proprietary_vendor_samsung_sm8550-common" path="vendor/samsung/sm8550-common" remote="private" revision="lineage-23.2" clone-depth="15" / -->
+    <project name="TheMuppets/proprietary_vendor_samsung_dm1q" path="vendor/samsung/dm1q" remote="private" revision="lineage-23.2" clone-depth="1"/>
+    <project name="Exynoobs/proprietary_vendor_samsung_b5q" path="vendor/samsung/b5q" remote="private" revision="lineage-23.2" clone-depth="1"/>
+    <project name="Exynoobs/proprietary_vendor_samsung_q5q" path="vendor/samsung/q5q" remote="private" revision="lineage-23.2" clone-depth="1"/>
+
+    <project name="LineageOS/android_kernel_samsung_sm8550" path="kernel/samsung/sm8550" remote="private" revision="lineage-23.2" clone-depth="200" />
+    <project name="LineageOS/android_kernel_samsung_sm8550-devicetrees" path="kernel/samsung/sm8550-devicetrees" remote="private" revision="lineage-23.2" clone-depth="100" />
+    <project name="LineageOS/android_kernel_samsung_sm8550-modules" path="kernel/samsung/sm8550-modules" remote="private" revision="lineage-23.2" />
+    <project name="LineageOS/android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" revision="lineage-23.2" />
+    <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="private" revision="lineage-23.2"/>
+
+    <!-- Pineapple -->
+
+    <project name="Exynoobs/android_device_samsung_sm8650-common" path="device/samsung/sm8650-common" remote="private" revision="lineage-23.2" />
+    <project name="Exynoobs/android_device_samsung_e3q" path="device/samsung/e3q" remote="private" revision="lineage-23.2" />
+
+    <project name="Exynoobs/android_kernel_samsung_sm8650" path="kernel/samsung/sm8650" remote="private" revision="lineage-23.2" clone-depth="200" />
+    <project name="Exynoobs/android_kernel_samsung_sm8650-devicetrees" path="kernel/samsung/sm8650-devicetrees" remote="private" revision="lineage-23.2" clone-depth="100" />
+    <project name="Exynoobs/android_kernel_samsung_sm8650-modules" path="kernel/samsung/sm8650-modules" remote="private" revision="lineage-23.2" clone-depth="100" />
+    <project name="Exynoobs/proprietary_vendor_samsung_sm8650-common" path="vendor/samsung/sm8650-common" remote="private" revision="lineage-23.2" clone-depth="15" />
+    <project name="Exynoobs/proprietary_vendor_samsung_e3q" path="vendor/samsung/e3q" remote="private" revision="lineage-23.2" clone-depth="10"/>
+
+    <!-- eSIM -->
+    <remote name="openeuicc" fetch="https://gitea.angry.im/PeterCxy" review="review.lineageos.org" revision="refs/heads/master" />
+    <!--project path="prebuilts/openeuicc-deps" name="android_prebuilts_openeuicc-deps" remote="openeuicc" />
+    <project path="packages/apps/OpenEUICC" name="Exynoobs/openeuicc" remote="private" sync-s="true" revision="samsung" /-->
+
+    <!--project path="packages/apps/PhhIms" remote="github" name="krazey/ims" revision="main" /-->
+    <project path="packages/modules/ImsStack"
+         remote="github"
+         name="krazey/ImsStack"
+	    revision="main" />
+    <remove-project path="packages/modules/ImsMedia"/>
+    <project path="packages/modules/ImsMedia"
+         remote="github"
+         name="krazey/ImsMedia"
+         revision="main" />
+    <project path="vendor/lineage/imsstack-carrier-config-ext"
+         remote="github"
+         name="krazey/imsstack-carrier-config-ext"
+         revision="main" />
+
+    <!-- amlogic -->
+    <project name="TheMuppets/proprietary_vendor_amlogic_ohm" path="vendor/amlogic/ohm" remote="private" revision="lineage-23.2" clone-depth="1"/>
+    <project name="TheMuppets/proprietary_vendor_amlogic_ne-common" path="vendor/amlogic/ne-common" remote="private" revision="lineage-23.2" clone-depth="1"/>
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/realtek-drivers/8821cu" remote="github" name="LineageOS/android_kernel_amlogic_realtek-drivers_8821cu" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/realtek-drivers/8821cs" remote="private" name="josip-k/android_hardware_amlogic_kernel-modules_rtl8821cs" revision="lineage-21" />
+
+    <!-- amlogic common -->
+    <include name="manifests/snippets/kernel-5.15.xml" />
+    <project path="device/amlogic/common" remote="github" name="LineageOS/android_device_amlogic_common" />
+    <project path="device/amlogic/ne-common" remote="github" name="LineageOS/android_device_amlogic_ne-common" />
+    <project path="device/amlogic/sepolicy" remote="github" name="LineageOS/android_device_amlogic_sepolicy" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/kernel" remote="github" name="LineageOS/android_kernel_amlogic_kernel-5.15" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/gpu-modules" remote="github" name="LineageOS/android_kernel_amlogic_gpu-modules" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/media-modules" remote="github" name="LineageOS/android_kernel_amlogic_media-modules" />
+    <project path="hardware/amlogic/tools/dtbtool" remote="github" name="LineageOS/android_hardware_amlogic_tools_dtbtool" />
+    <project path="hardware/amlogic/tools/imagepacker" remote="github" name="LineageOS/android_hardware_amlogic_tools_imagepacker" />
+    <project path="hardware/amlogic/tools/respacker" remote="github" name="LineageOS/android_hardware_amlogic_tools_respacker" />
+
+    <!-- vontarx4 -->
+    <project path="device/amlogic/vontarx4" remote="private" name="josip-k/android_device_amlogic_vontarx4" revision="lineage-23.2" />
+    <project path="vendor/amlogic/vontarx4" remote="private" name="josip-k/proprietary_vendor_amlogic_vontarx4" revision="lineage-23.2" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/common_drivers" remote="private" name="josip-k/android_kernel_amlogic_common_drivers" revision="lineage-23.2" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/vontar-build" remote="private" name="josip-k/android_kernel_amlogic_vontar-build" revision="lineage-23.2" />
+    <project path="kernel/platform/kernel-5.15/vendor/amlogic/dhd-driver" remote="private" name="josip-k/android_kernel_amlogic_dhd-driver" revision="lineage-23.2" />
+    <project path="hardware/amlogic/u-boot" remote="private" name="josip-k/android_hardware_amlogic_u-boot-sc2" revision="lineage-23.2" />
+	
+
+
+</manifest>
